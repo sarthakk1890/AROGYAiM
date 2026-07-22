@@ -1,0 +1,17 @@
+.progress-container {
+  width: 100%;
+  background-color: var(--color-surface-hover);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-normal);
+}
+
+.progress-sm { height: 4px; }
+.progress-md { height: 8px; }
+.progress-lg { height: 12px; }

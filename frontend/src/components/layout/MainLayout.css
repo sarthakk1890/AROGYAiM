@@ -1,0 +1,36 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-content {
+  display: flex;
+  flex: 1;
+}
+
+.page-content {
+  flex: 1;
+  padding: var(--spacing-8);
+  overflow-y: auto;
+  background-color: var(--color-bg);
+}
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: var(--spacing-4);
+  }
+
+  .mobile-overlay.open {
+    display: block;
+  }
+}

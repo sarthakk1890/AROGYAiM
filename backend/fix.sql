@@ -1,0 +1,18 @@
+ALTER TABLE "User" ALTER COLUMN "id" SET DEFAULT gen_random_uuid(), ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE "PatientProfile" ALTER COLUMN "id" SET DEFAULT gen_random_uuid(), ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE "PhysiotherapistProfile" ALTER COLUMN "id" SET DEFAULT gen_random_uuid(), ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE "AdminProfile" ALTER COLUMN "id" SET DEFAULT gen_random_uuid(), ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE "RefreshToken" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();
+ALTER TABLE "VerificationToken" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();
+ALTER TABLE "PasswordResetToken" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();
+ALTER TABLE "Notification" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();
+ALTER TABLE "Availability" ALTER COLUMN "id" SET DEFAULT gen_random_uuid(), ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE "Appointment" ALTER COLUMN "id" SET DEFAULT gen_random_uuid(), ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE "ExerciseCategory" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();
+ALTER TABLE "Exercise" ALTER COLUMN "id" SET DEFAULT gen_random_uuid(), ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE "ExercisePlan" ALTER COLUMN "id" SET DEFAULT gen_random_uuid(), ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE "ExercisePlanItem" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();
+ALTER TABLE "AssignedExercisePlan" ALTER COLUMN "id" SET DEFAULT gen_random_uuid(), ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE "ExerciseSession" ALTER COLUMN "id" SET DEFAULT gen_random_uuid(), ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE "SessionCompletion" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();
+ALTER TABLE "NotificationPreference" ALTER COLUMN "id" SET DEFAULT gen_random_uuid(), ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
