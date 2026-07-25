@@ -27,14 +27,14 @@ CREATE TYPE "SessionStatus" AS ENUM ('PENDING', 'COMPLETED', 'MISSED');
 
 -- CreateTable
 CREATE TABLE "User" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "email" VARCHAR(255) NOT NULL,
     "passwordHash" TEXT NOT NULL,
     "role" "Role" NOT NULL DEFAULT 'PATIENT',
     "status" "UserStatus" NOT NULL DEFAULT 'PENDING',
     "emailVerified" BOOLEAN NOT NULL DEFAULT false,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "deletedAt" TIMESTAMP(3),
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
@@ -42,7 +42,7 @@ CREATE TABLE "User" (
 
 -- CreateTable
 CREATE TABLE "PatientProfile" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "userId" UUID NOT NULL,
     "firstName" VARCHAR(100) NOT NULL,
     "lastName" VARCHAR(100) NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE "PatientProfile" (
     "emergencyContact" TEXT,
     "recoveryGoals" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "deletedAt" TIMESTAMP(3),
 
     CONSTRAINT "PatientProfile_pkey" PRIMARY KEY ("id")
@@ -63,7 +63,7 @@ CREATE TABLE "PatientProfile" (
 
 -- CreateTable
 CREATE TABLE "PhysiotherapistProfile" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "userId" UUID NOT NULL,
     "firstName" VARCHAR(100) NOT NULL,
     "lastName" VARCHAR(100) NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE "PhysiotherapistProfile" (
     "licenseNumber" VARCHAR(100),
     "documentsUrl" TEXT[],
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "deletedAt" TIMESTAMP(3),
 
     CONSTRAINT "PhysiotherapistProfile_pkey" PRIMARY KEY ("id")
@@ -84,13 +84,13 @@ CREATE TABLE "PhysiotherapistProfile" (
 
 -- CreateTable
 CREATE TABLE "AdminProfile" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "userId" UUID NOT NULL,
     "firstName" VARCHAR(100) NOT NULL,
     "lastName" VARCHAR(100) NOT NULL,
     "department" VARCHAR(100),
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "deletedAt" TIMESTAMP(3),
 
     CONSTRAINT "AdminProfile_pkey" PRIMARY KEY ("id")
@@ -98,7 +98,7 @@ CREATE TABLE "AdminProfile" (
 
 -- CreateTable
 CREATE TABLE "RefreshToken" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "token" VARCHAR(500) NOT NULL,
     "userId" UUID NOT NULL,
     "expiresAt" TIMESTAMP(3) NOT NULL,
@@ -111,7 +111,7 @@ CREATE TABLE "RefreshToken" (
 
 -- CreateTable
 CREATE TABLE "VerificationToken" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "token" VARCHAR(255) NOT NULL,
     "userId" UUID NOT NULL,
     "expiresAt" TIMESTAMP(3) NOT NULL,
@@ -122,7 +122,7 @@ CREATE TABLE "VerificationToken" (
 
 -- CreateTable
 CREATE TABLE "PasswordResetToken" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "token" VARCHAR(255) NOT NULL,
     "userId" UUID NOT NULL,
     "expiresAt" TIMESTAMP(3) NOT NULL,
@@ -133,7 +133,7 @@ CREATE TABLE "PasswordResetToken" (
 
 -- CreateTable
 CREATE TABLE "Notification" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "userId" UUID NOT NULL,
     "type" "NotificationType" NOT NULL DEFAULT 'SYSTEM',
     "title" VARCHAR(255) NOT NULL,
@@ -147,13 +147,13 @@ CREATE TABLE "Notification" (
 
 -- CreateTable
 CREATE TABLE "Availability" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "physiotherapistId" UUID NOT NULL,
     "dayOfWeek" INTEGER NOT NULL,
     "startTime" VARCHAR(5) NOT NULL,
     "endTime" VARCHAR(5) NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "deletedAt" TIMESTAMP(3),
 
     CONSTRAINT "Availability_pkey" PRIMARY KEY ("id")
@@ -161,7 +161,7 @@ CREATE TABLE "Availability" (
 
 -- CreateTable
 CREATE TABLE "Appointment" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "patientId" UUID NOT NULL,
     "physiotherapistId" UUID NOT NULL,
     "date" DATE NOT NULL,
@@ -171,7 +171,7 @@ CREATE TABLE "Appointment" (
     "notes" TEXT,
     "cancellationReason" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "deletedAt" TIMESTAMP(3),
 
     CONSTRAINT "Appointment_pkey" PRIMARY KEY ("id")
@@ -179,7 +179,7 @@ CREATE TABLE "Appointment" (
 
 -- CreateTable
 CREATE TABLE "ExerciseCategory" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "name" VARCHAR(100) NOT NULL,
     "description" TEXT,
 
@@ -188,7 +188,7 @@ CREATE TABLE "ExerciseCategory" (
 
 -- CreateTable
 CREATE TABLE "Exercise" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "categoryId" UUID NOT NULL,
     "name" VARCHAR(255) NOT NULL,
     "description" TEXT NOT NULL,
@@ -200,7 +200,7 @@ CREATE TABLE "Exercise" (
     "imageUrl" VARCHAR(500),
     "contraindications" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "deletedAt" TIMESTAMP(3),
 
     CONSTRAINT "Exercise_pkey" PRIMARY KEY ("id")
@@ -208,7 +208,7 @@ CREATE TABLE "Exercise" (
 
 -- CreateTable
 CREATE TABLE "ExercisePlan" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "physiotherapistId" UUID NOT NULL,
     "name" VARCHAR(255) NOT NULL,
     "description" TEXT,
@@ -216,7 +216,7 @@ CREATE TABLE "ExercisePlan" (
     "version" INTEGER NOT NULL DEFAULT 1,
     "parentPlanId" UUID,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "deletedAt" TIMESTAMP(3),
 
     CONSTRAINT "ExercisePlan_pkey" PRIMARY KEY ("id")
@@ -224,7 +224,7 @@ CREATE TABLE "ExercisePlan" (
 
 -- CreateTable
 CREATE TABLE "ExercisePlanItem" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "planId" UUID NOT NULL,
     "exerciseId" UUID NOT NULL,
     "sets" INTEGER NOT NULL,
@@ -240,7 +240,7 @@ CREATE TABLE "ExercisePlanItem" (
 
 -- CreateTable
 CREATE TABLE "AssignedExercisePlan" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "patientId" UUID NOT NULL,
     "physiotherapistId" UUID NOT NULL,
     "planId" UUID NOT NULL,
@@ -248,27 +248,27 @@ CREATE TABLE "AssignedExercisePlan" (
     "endDate" DATE,
     "status" "AssignedPlanStatus" NOT NULL DEFAULT 'ACTIVE',
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "AssignedExercisePlan_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "ExerciseSession" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "assignedPlanId" UUID NOT NULL,
     "patientId" UUID NOT NULL,
     "scheduledDate" DATE NOT NULL,
     "status" "SessionStatus" NOT NULL DEFAULT 'PENDING',
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "ExerciseSession_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "SessionCompletion" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "sessionId" UUID NOT NULL,
     "exerciseId" UUID NOT NULL,
     "completedSets" INTEGER NOT NULL,
@@ -283,7 +283,7 @@ CREATE TABLE "SessionCompletion" (
 
 -- CreateTable
 CREATE TABLE "NotificationPreference" (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "userId" UUID NOT NULL,
     "inAppEnabled" BOOLEAN NOT NULL DEFAULT true,
     "emailEnabled" BOOLEAN NOT NULL DEFAULT true,
@@ -291,7 +291,7 @@ CREATE TABLE "NotificationPreference" (
     "emailRehabUpdates" BOOLEAN NOT NULL DEFAULT true,
     "emailSystemAlerts" BOOLEAN NOT NULL DEFAULT true,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "NotificationPreference_pkey" PRIMARY KEY ("id")
 );

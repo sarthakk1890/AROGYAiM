@@ -1,0 +1,58 @@
+2026-07-25 18:05:48:548 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:05:48:548 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:05:52:552 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:05:52:552 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:12:23:1223 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:12:23:1223 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:13:55:1355 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:13:55:1355 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:22:15:2215 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:22:15:2215 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:22:22:2222 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:22:22:2222 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:23:11:2311 [31merror[39m: [31m400 - User already exists - /api/v1/auth/register/patient - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:23:11:2311 [31merror[39m: [31mError: User already exists[39m
+[31m    at AuthService.registerPatient (/usr/src/app/src/services/authService.ts:14:13)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:9:16[39m
+2026-07-25 18:23:42:2342 [31merror[39m: [31mError sending verification email to test@gmail.com: Missing credentials for "PLAIN"[39m
+2026-07-25 18:23:53:2353 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:23:53:2353 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:29:18:2918 [31merror[39m: [31m401 - Not authorized, no token provided - /api/v1/rehabilitation/current - GET - ::ffff:172.18.0.1[39m
+2026-07-25 18:29:18:2918 [31merror[39m: [31mError: Not authorized, no token provided[39m
+[31m    at authenticate (/usr/src/app/src/middleware/authMiddleware.ts:17:17)[39m
+[31m    at Layer.handleRequest (/usr/src/app/node_modules/router/lib/layer.js:152:17)[39m
+[31m    at next (/usr/src/app/node_modules/router/lib/route.js:157:13)[39m
+[31m    at Route.dispatch (/usr/src/app/node_modules/router/lib/route.js:117:3)[39m
+[31m    at handle (/usr/src/app/node_modules/router/index.js:435:11)[39m
+[31m    at Layer.handleRequest (/usr/src/app/node_modules/router/lib/layer.js:152:17)[39m
+[31m    at /usr/src/app/node_modules/router/index.js:295:15[39m
+[31m    at processParams (/usr/src/app/node_modules/router/index.js:582:12)[39m
+[31m    at next (/usr/src/app/node_modules/router/index.js:291:5)[39m
+[31m    at Function.handle (/usr/src/app/node_modules/router/index.js:186:3)[39m
+2026-07-25 18:29:18:2918 [31merror[39m: [31m401 - Not authorized, no token provided - /api/v1/rehabilitation/history - GET - ::ffff:172.18.0.1[39m
+2026-07-25 18:29:18:2918 [31merror[39m: [31mError: Not authorized, no token provided[39m
+[31m    at authenticate (/usr/src/app/src/middleware/authMiddleware.ts:17:17)[39m
+[31m    at Layer.handleRequest (/usr/src/app/node_modules/router/lib/layer.js:152:17)[39m
+[31m    at next (/usr/src/app/node_modules/router/lib/route.js:157:13)[39m
+[31m    at Route.dispatch (/usr/src/app/node_modules/router/lib/route.js:117:3)[39m
+[31m    at handle (/usr/src/app/node_modules/router/index.js:435:11)[39m
+[31m    at Layer.handleRequest (/usr/src/app/node_modules/router/lib/layer.js:152:17)[39m
+[31m    at /usr/src/app/node_modules/router/index.js:295:15[39m
+[31m    at processParams (/usr/src/app/node_modules/router/index.js:582:12)[39m
+[31m    at next (/usr/src/app/node_modules/router/index.js:291:5)[39m
+[31m    at Function.handle (/usr/src/app/node_modules/router/index.js:186:3)[39m

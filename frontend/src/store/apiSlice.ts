@@ -28,7 +28,9 @@ const baseQueryWithReauth: BaseQueryFn<
   // First, attempt the request
   let result = await baseQuery(args, api, extraOptions);
 
-  if (result.error && result.error.status === 401) {
+  const isLoginRequest = typeof args === 'string' ? args.includes('/auth/login') : args.url?.includes('/auth/login');
+
+  if (result.error && result.error.status === 401 && !isLoginRequest) {
     // Attempt to refresh the token via HttpOnly cookie
     const refreshResult = await baseQuery(
       {
@@ -56,8 +58,8 @@ const baseQueryWithReauth: BaseQueryFn<
   if (result.error) {
     const errorData = result.error.data as any;
     const errorMessage = errorData?.message || 'An unexpected error occurred';
-    // Don't toast 401s during the silent refresh
-    if (result.error.status !== 401) {
+    // Don't toast 401s during the silent refresh (except for login requests where 401 means invalid credentials)
+    if (result.error.status !== 401 || isLoginRequest) {
       toast.error(errorMessage);
     }
   }

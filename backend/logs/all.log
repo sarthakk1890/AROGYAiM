@@ -1,0 +1,96 @@
+2026-07-25 17:50:23:5023 [32minfo[39m: [32mServer running on port 5000 in development mode[39m
+2026-07-25 18:03:06:36 [32minfo[39m: [32mReceived SIGTERM. Shutting down gracefully...[39m
+2026-07-25 18:03:47:347 [32minfo[39m: [32mServer running on port 5000 in development mode[39m
+2026-07-25 18:05:48:548 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:05:48:548 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:05:48:548 [35mhttp[39m: [35mPOST /api/v1/auth/login 401 235 - 178.355 ms[39m
+2026-07-25 18:05:48:548 [35mhttp[39m: [35mPOST /api/v1/auth/refresh-token 401 67 - 1.211 ms[39m
+2026-07-25 18:05:52:552 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:05:52:552 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:05:52:552 [35mhttp[39m: [35mPOST /api/v1/auth/login 401 235 - 65.852 ms[39m
+2026-07-25 18:12:23:1223 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:12:23:1223 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:12:23:1223 [35mhttp[39m: [35mPOST /api/v1/auth/login 401 235 - 114.261 ms[39m
+2026-07-25 18:12:33:1233 [32minfo[39m: [32mReceived SIGTERM. Shutting down gracefully...[39m
+2026-07-25 18:13:11:1311 [32minfo[39m: [32mServer running on port 5000 in development mode[39m
+2026-07-25 18:13:55:1355 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:13:55:1355 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:13:55:1355 [35mhttp[39m: [35mPOST /api/v1/auth/login 401 235 - 131.832 ms[39m
+2026-07-25 18:13:57:1357 [35mhttp[39m: [35mPOST /api/v1/auth/refresh-token 401 67 - 0.704 ms[39m
+2026-07-25 18:22:15:2215 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:22:15:2215 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:22:15:2215 [35mhttp[39m: [35mPOST /api/v1/auth/login 401 235 - 120.628 ms[39m
+2026-07-25 18:22:22:2222 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:22:22:2222 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:22:22:2222 [35mhttp[39m: [35mPOST /api/v1/auth/login 401 235 - 59.058 ms[39m
+2026-07-25 18:23:11:2311 [31merror[39m: [31m400 - User already exists - /api/v1/auth/register/patient - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:23:11:2311 [31merror[39m: [31mError: User already exists[39m
+[31m    at AuthService.registerPatient (/usr/src/app/src/services/authService.ts:14:13)[39m
+[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:9:16[39m
+2026-07-25 18:23:11:2311 [35mhttp[39m: [35mPOST /api/v1/auth/register/patient 400 319 - 108.892 ms[39m
+2026-07-25 18:23:42:2342 [31merror[39m: [31mError sending verification email to test@gmail.com: Missing credentials for "PLAIN"[39m
+2026-07-25 18:23:42:2342 [35mhttp[39m: [35mPOST /api/v1/auth/register/patient 201 169 - 1713.846 ms[39m
+2026-07-25 18:23:53:2353 [31merror[39m: [31m401 - Invalid credentials - /api/v1/auth/login - POST - ::ffff:172.18.0.1[39m
+2026-07-25 18:23:53:2353 [31merror[39m: [31mError: Invalid credentials[39m
+[31m    at AuthService.login (/usr/src/app/src/services/authService.ts:95:13)[39m
+[31m    at /usr/src/app/src/controllers/authController.ts:20:47[39m
+2026-07-25 18:23:53:2353 [35mhttp[39m: [35mPOST /api/v1/auth/login 401 235 - 55.378 ms[39m
+2026-07-25 18:23:59:2359 [35mhttp[39m: [35mPOST /api/v1/auth/login 200 375 - 74.947 ms[39m
+2026-07-25 18:24:01:241 [35mhttp[39m: [35mGET /api/v1/users/me 200 695 - 14.487 ms[39m
+2026-07-25 18:24:01:241 [35mhttp[39m: [35mGET /api/v1/appointments/history 200 68 - 33.545 ms[39m
+2026-07-25 18:24:02:242 [35mhttp[39m: [35mGET /api/v1/rehabilitation/current 200 69 - 50.903 ms[39m
+2026-07-25 18:24:15:2415 [35mhttp[39m: [35mGET /api/v1/rehabilitation/history 200 67 - 16.871 ms[39m
+2026-07-25 18:24:17:2417 [35mhttp[39m: [35mGET /api/v1/notifications?page=1&limit=50 200 122 - 8.316 ms[39m
+2026-07-25 18:27:37:2737 [35mhttp[39m: [35mGET /api/v1/appointments/history 304 - - 78.816 ms[39m
+2026-07-25 18:27:39:2739 [35mhttp[39m: [35mGET /api/v1/rehabilitation/current 304 - - 11.322 ms[39m
+2026-07-25 18:27:51:2751 [35mhttp[39m: [35mGET /api/v1/rehabilitation/history 304 - - 9.022 ms[39m
+2026-07-25 18:27:53:2753 [35mhttp[39m: [35mGET /api/v1/notifications?page=1&limit=50 304 - - 20.684 ms[39m
+2026-07-25 18:28:41:2841 [35mhttp[39m: [35mGET /api/v1/physios?page=1&limit=20 200 130 - 36.454 ms[39m
+2026-07-25 18:29:18:2918 [31merror[39m: [31m401 - Not authorized, no token provided - /api/v1/rehabilitation/current - GET - ::ffff:172.18.0.1[39m
+2026-07-25 18:29:18:2918 [31merror[39m: [31mError: Not authorized, no token provided[39m
+[31m    at authenticate (/usr/src/app/src/middleware/authMiddleware.ts:17:17)[39m
+[31m    at Layer.handleRequest (/usr/src/app/node_modules/router/lib/layer.js:152:17)[39m
+[31m    at next (/usr/src/app/node_modules/router/lib/route.js:157:13)[39m
+[31m    at Route.dispatch (/usr/src/app/node_modules/router/lib/route.js:117:3)[39m
+[31m    at handle (/usr/src/app/node_modules/router/index.js:435:11)[39m
+[31m    at Layer.handleRequest (/usr/src/app/node_modules/router/lib/layer.js:152:17)[39m
+[31m    at /usr/src/app/node_modules/router/index.js:295:15[39m
+[31m    at processParams (/usr/src/app/node_modules/router/index.js:582:12)[39m
+[31m    at next (/usr/src/app/node_modules/router/index.js:291:5)[39m
+[31m    at Function.handle (/usr/src/app/node_modules/router/index.js:186:3)[39m
+2026-07-25 18:29:18:2918 [35mhttp[39m: [35mGET /api/v1/rehabilitation/current 401 846 - 17.803 ms[39m
+2026-07-25 18:29:18:2918 [31merror[39m: [31m401 - Not authorized, no token provided - /api/v1/rehabilitation/history - GET - ::ffff:172.18.0.1[39m
+2026-07-25 18:29:18:2918 [31merror[39m: [31mError: Not authorized, no token provided[39m
+[31m    at authenticate (/usr/src/app/src/middleware/authMiddleware.ts:17:17)[39m
+[31m    at Layer.handleRequest (/usr/src/app/node_modules/router/lib/layer.js:152:17)[39m
+[31m    at next (/usr/src/app/node_modules/router/lib/route.js:157:13)[39m
+[31m    at Route.dispatch (/usr/src/app/node_modules/router/lib/route.js:117:3)[39m
+[31m    at handle (/usr/src/app/node_modules/router/index.js:435:11)[39m
+[31m    at Layer.handleRequest (/usr/src/app/node_modules/router/lib/layer.js:152:17)[39m
+[31m    at /usr/src/app/node_modules/router/index.js:295:15[39m
+[31m    at processParams (/usr/src/app/node_modules/router/index.js:582:12)[39m
+[31m    at next (/usr/src/app/node_modules/router/index.js:291:5)[39m
+[31m    at Function.handle (/usr/src/app/node_modules/router/index.js:186:3)[39m
+2026-07-25 18:29:18:2918 [35mhttp[39m: [35mGET /api/v1/rehabilitation/history 401 846 - 8.270 ms[39m
+2026-07-25 18:29:18:2918 [35mhttp[39m: [35mPOST /api/v1/auth/refresh-token 200 279 - 82.238 ms[39m
+2026-07-25 18:29:18:2918 [35mhttp[39m: [35mPOST /api/v1/auth/refresh-token 200 279 - 75.050 ms[39m
+2026-07-25 18:29:18:2918 [35mhttp[39m: [35mGET /api/v1/rehabilitation/current 304 - - 20.208 ms[39m
+2026-07-25 18:29:18:2918 [35mhttp[39m: [35mGET /api/v1/rehabilitation/history 304 - - 20.604 ms[39m
+2026-07-25 18:29:31:2931 [35mhttp[39m: [35mGET /api/v1/appointments/history 304 - - 4.715 ms[39m
+2026-07-25 18:39:05:395 [35mhttp[39m: [35mGET /api/v1/notifications?page=1&limit=50 304 - - 156.457 ms[39m
+2026-07-25 18:39:06:396 [35mhttp[39m: [35mGET /api/v1/users/me 200 695 - 50.551 ms[39m
+2026-07-25 18:39:11:3911 [35mhttp[39m: [35mGET /api/v1/appointments/history 304 - - 30.818 ms[39m
+2026-07-25 19:05:48:548 [32minfo[39m: [32mReceived SIGTERM. Shutting down gracefully...[39m

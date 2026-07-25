@@ -1,7 +1,7 @@
 import { body, query } from 'express-validator';
 
 export const registerPatientValidator = [
-  body('email').isEmail().withMessage('Valid email is required'),
+  body('email').trim().toLowerCase().isEmail().withMessage('Valid email is required'),
   body('password').isLength({ min: 8 }).withMessage('Password must be at least 8 characters long'),
   body('firstName').notEmpty().withMessage('First name is required'),
   body('lastName').notEmpty().withMessage('Last name is required'),
@@ -13,7 +13,7 @@ export const registerPhysioValidator = [
 ];
 
 export const loginValidator = [
-  body('email').isEmail().withMessage('Valid email is required'),
+  body('email').trim().toLowerCase().isEmail().withMessage('Valid email is required'),
   body('password').notEmpty().withMessage('Password is required'),
 ];
 
@@ -23,7 +23,7 @@ export const changePasswordValidator = [
 ];
 
 export const forgotPasswordValidator = [
-  body('email').isEmail().withMessage('Valid email is required'),
+  body('email').trim().toLowerCase().isEmail().withMessage('Valid email is required'),
 ];
 
 export const resetPasswordValidator = [

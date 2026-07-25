@@ -22,8 +22,13 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
+      target: builder
     container_name: mova_backend
     restart: always
+    command: npm run dev
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - '5000:5000'
     environment:
@@ -44,10 +49,15 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      target: builder
       args:
         VITE_API_URL: http://localhost:5000/api/v1
     container_name: mova_frontend
     restart: always
+    command: npm run dev -- --host 0.0.0.0 --port 80
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - '5173:80'
     depends_on:
